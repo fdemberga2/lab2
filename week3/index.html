@@ -2,20 +2,49 @@
 <html>
 <head>
 <style>
-div.static {
-  position: static;
-  border: 3px solid #73AD21;
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2; /* green box will be above black box */
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
 }
 </style>
 </head>
 <body>
 
-<h2>position: static;</h2>
+<h1>Z-index Example</h1>
 
-<p>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+<p>An element with greater stack order is always above an element with a lower stack order.</p>
 
-<div class="static">
-This div element has position: static;
+<div class="container">
+  <div class="black-box">Black box (z-index: 1)</div>
+  <div class="gray-box">Gray box (z-index: 3)</div>
+  <div class="green-box">Green box (z-index: 2)</div>
 </div>
 
 </body>
