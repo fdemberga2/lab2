@@ -5,10 +5,14 @@ body {
     background-size: auto;
   }
    .profile-card {
+    position: fixed;
+    top: 23%;
+    right: 0;
+    left: 0;
     margin: auto;
     width: 60%;
     border: 3px solid #73AD21;
-    padding-top: 100px;
+    padding-top: 10px;
   }
   .profile-card {
     display: flex;
