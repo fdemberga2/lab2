@@ -1,6 +1,6 @@
 body {
     background-image: url("../src/Ayala-Corp.jpg");
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
   }
@@ -124,4 +124,13 @@ hr#header{
     opacity: 0.5;
     color: white;
     size: 4;
+}
+.button{
+  position: fixed;
+  right: 3%;
+  top: 23%;
+  width: auto;
+  background-color: white;
+  border-radius: 3%;
+  text-align: center;
 }
