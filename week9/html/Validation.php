@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>  
 <html>
+  <title>Masterclass Registration</title>
+  <link rel="stylesheet" type="text/css" href="../css/Validation.css">
 <head>
 <style>
 .error {color: #FF0000;}
 </style>
-<link rel="stylesheet" type="text/css" href="../css/Validation.css">
 </head> 
 <body>
   <div class="BG"></div>
