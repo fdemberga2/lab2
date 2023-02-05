@@ -4,9 +4,21 @@
 <style>
 .error {color: #FF0000;}
 </style>
-</head>
-<body>  
-
+<link rel="stylesheet" type="text/css" href="../css/Validation.css">
+</head> 
+<body>
+  <div class="BG"></div>
+    <div class="Padds">
+      <header>
+          <nav>
+            <ul>
+              <li><a href="Underconstruction.php">About Me</a></li>
+              <li><a href="../index.php">Home</a></li>
+              <li><a href="Resources.php">Resources</a></li>
+            </ul>
+          </nav>
+      </header>
+    </div>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -64,19 +76,27 @@ function test_input($data) {
 }
 ?>
 
-<h2>Fill out the from and add your message</h2>
+<h2>Want to join my masterclass?</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  Name:
+  <br><br>
+  <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  E-mail:
+  <br><br>
+  <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
+  Website:
+  <br><br>
+  <input type="text" name="website" value="<?php echo $website;?>">
   <span class="error"><?php echo $websiteErr;?></span>
   <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  Comment:
+  <br><br>
+  <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
@@ -98,6 +118,7 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+echo "<br>";
 ?>
 
 </body>

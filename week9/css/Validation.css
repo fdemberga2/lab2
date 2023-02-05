@@ -1,0 +1,42 @@
+html {
+  font-size: 16px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  color:aliceblue;
+  text-align: center;
+}
+.BG {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../src/Ayala-Corp.jpg") #a0a874;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  filter: blur(10px);
+  z-index: -1;
+}
+.Padds {
+  max-width: 1200px;
+  margin: 0;
+}
+
+/*Navbar*/
+
+header {
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items:flex-start
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
