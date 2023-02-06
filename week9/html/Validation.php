@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>  
 <html>
-  <title>Masterclass Registration</title>
-  <link rel="stylesheet" type="text/css" href="../css/Validation.css">
 <head>
 <style>
 .error {color: #FF0000;}
 </style>
+<link rel="stylesheet" type="text/css" href="../css/Validation.css">
 </head> 
 <body>
   <div class="BG"></div>
@@ -120,6 +119,33 @@ echo $comment;
 echo "<br>";
 echo $gender;
 echo "<br>";
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "registrations";
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+	
+	$sql = "INSERT INTO registrants (firstname, email, website, comment, gender)
+	VALUES ('$name', '$email', '$website','$comment', '$gender')";
+	
+	if ($conn->query($sql) === TRUE) {
+	echo "Your Application Has Been Submitted";
+	} else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	
+	$conn->close();
+}	
+
 ?>
 
 </body>
