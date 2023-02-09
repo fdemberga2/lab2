@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Registrations";
+$servername = "http://apcwebprog.csf.ph/phpmyadmin/";
+$username = "webprogmi212";
+$password = "webprogmi212";
+$dbname = "fdemberga_masterclass";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
