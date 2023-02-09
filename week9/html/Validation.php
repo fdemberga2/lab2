@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	die("Connection failed: " . $conn->connect_error);
 	}
 	
-	$sql = "INSERT INTO fdemberga_masterclass (firstname, email, website, comment, gender)
+	$sql = "INSERT INTO fdemberga_masterclass (NAME, EMAIL, WEBSITE, COMMENT, GENDER)
 	VALUES ('$name', '$email', '$website','$comment', '$gender')";
 	
 	if ($conn->query($sql) === TRUE) {
