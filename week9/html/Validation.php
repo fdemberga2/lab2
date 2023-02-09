@@ -122,10 +122,10 @@ echo "<br>";
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "registrations";
+  $servername = "localhost";
+  $username = "webprogmi212";
+  $password = "webprogmi212";
+  $dbname = "webprogmi212";
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	die("Connection failed: " . $conn->connect_error);
 	}
 	
-	$sql = "INSERT INTO registrants (firstname, email, website, comment, gender)
+	$sql = "INSERT INTO fdemberga_masterclass (firstname, email, website, comment, gender)
 	VALUES ('$name', '$email', '$website','$comment', '$gender')";
 	
 	if ($conn->query($sql) === TRUE) {
